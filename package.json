@@ -1,0 +1,25 @@
+{
+  "name": "poli_backend",
+  "version": "1.0.0",
+  "description": "poligram backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erezpoliak/poli_backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erezpoliak/poli_backend/issues"
+  },
+  "homepage": "https://github.com/erezpoliak/poli_backend#readme",
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/node": "^7.10.1",
+    "nodemon": "^2.0.4"
+  }
+}
