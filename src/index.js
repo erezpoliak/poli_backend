@@ -56,4 +56,5 @@ const createUserWithMsg = async () => {
   await msg2.save();
   await user1.save();
   console.log("msgs created");
+  const a = 2;
 };
