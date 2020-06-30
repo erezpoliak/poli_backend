@@ -8,6 +8,7 @@ import Like from "./like";
 
 mongoose.set("useUnifiedTopology", true);
 mongoose.set("useCreateIndex", true);
+mongoose.set("useFindAndModify", false);
 
 const connectDb = () => {
   return mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });

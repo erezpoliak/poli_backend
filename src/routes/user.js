@@ -33,4 +33,18 @@ router.get("/:login", async (req, res) => {
   return res.send(user);
 });
 
+router.patch("/:id", async (req, res) => {
+  await req.context.models.User.findByIdAndUpdate(
+    req.params.id,
+
+    req.body,
+
+    { new: true },
+    (err, result) => {
+      if (err) res.send(err);
+      else res.send(result);
+    }
+  );
+});
+
 export default router;

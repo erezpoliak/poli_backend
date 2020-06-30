@@ -19,6 +19,9 @@ const userSchema = new moongoose.Schema(
       type: String,
       required: true,
     },
+    bio: {
+      type: String,
+    },
   },
   { timestamps: true }
 );
