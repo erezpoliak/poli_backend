@@ -15,6 +15,13 @@ router.post("/", async (req, res) => {
     userId: req.body.userId,
   });
 
+  router.get("/:userId", async (req, res) => {
+    const photos = await req.context.models.Photo.find({
+      userId: req.params.userId,
+    });
+    return res.send(photos);
+  });
+
   return res.send(photo);
 });
 
