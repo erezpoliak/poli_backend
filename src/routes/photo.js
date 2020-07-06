@@ -25,4 +25,10 @@ router.post("/", async (req, res) => {
   return res.send(photo);
 });
 
+router.delete("/:photoId", async (req, res) => {
+  const photo = await req.context.models.Photo.findById(req.params.photoId);
+  await photo.remove();
+  return res.send(photo);
+});
+
 export default router;
