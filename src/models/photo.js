@@ -2,8 +2,8 @@ import mongoose from "mongoose";
 
 const photoSchema = new mongoose.Schema(
   {
-    userId: {
-      type: mongoose.Schema.Types.ObjectId,
+    user: {
+      type: Object,
       ref: "User",
       required: true,
     },

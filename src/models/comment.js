@@ -2,18 +2,18 @@ import mongoose from "mongoose";
 
 const commnentSchema = new mongoose.Schema(
   {
-    userId: {
-      type: mongoose.Schema.Types.ObjectId,
+    user: {
+      type: Object,
       ref: "User",
       required: true,
     },
-    commentedUserId: {
-      type: mongoose.Schema.Types.ObjectId,
+    commentedUser: {
+      type: Object,
       ref: "User",
       required: true,
     },
-    photoId: {
-      type: mongoose.Schema.Types.ObjectId,
+    photo: {
+      type: Object,
       ref: "Photo",
       required: true,
     },

@@ -12,12 +12,12 @@ router.post("/", async (req, res) => {
   const photo = await req.context.models.Photo.create({
     title: req.body.title,
     url: req.body.url,
-    userId: req.body.userId,
+    user: req.body.user,
   });
 
-  router.get("/:userId", async (req, res) => {
+  router.get("/:user", async (req, res) => {
     const photos = await req.context.models.Photo.find({
-      userId: req.params.userId,
+      user: req.params.user,
     });
     return res.send(photos);
   });

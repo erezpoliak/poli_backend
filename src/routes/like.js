@@ -9,8 +9,8 @@ router.get("/", async (req, res) => {
 
 router.post("/", async (req, res) => {
   const like = await req.context.models.Like.create({
-    userId: req.body.userId,
-    photoId: req.body.photoId,
+    user: req.body.user,
+    photo: req.body.photo,
     userWhoLikedIt: req.body.userWhoLikedIt,
   });
   return res.send(like);
@@ -24,8 +24,8 @@ router.delete("/:id", async (req, res) => {
 
 router.get("/:userId/:photoId", async (req, res) => {
   const like = await req.context.models.Like.find({
-    userId: req.params.userId,
-    photoId: req.params.photoId,
+    "userWhoLikedIt._id": req.params.userId,
+    "photo._id": req.params.photoId,
   });
   return res.send(like);
 });

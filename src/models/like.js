@@ -2,16 +2,16 @@ import mongoose from "mongoose";
 
 const likeSchema = new mongoose.Schema(
   {
-    userId: {
-      type: mongoose.Schema.Types.ObjectId,
+    user: {
+      type: Object,
       ref: "User",
     },
-    photoId: {
-      type: mongoose.Schema.Types.ObjectId,
+    photo: {
+      type: Object,
       ref: "Photo",
     },
     userWhoLikedIt: {
-      type: mongoose.Schema.Types.ObjectId,
+      type: Object,
       ref: "User",
     },
   },

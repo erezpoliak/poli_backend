@@ -16,9 +16,9 @@ router.get("/", async (req, res) => {
 
 router.post("/", async (req, res) => {
   const comment = await req.context.models.Comment.create({
-    userId: req.body.userId,
-    photoId: req.body.photoId,
-    commentedUserId: req.body.commentedUserId,
+    user: req.body.user,
+    photo: req.body.photo,
+    commentedUser: req.body.commentedUser,
     comment: req.body.comment,
   });
   return res.send(comment);
