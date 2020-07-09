@@ -47,4 +47,17 @@ router.patch("/:id", async (req, res) => {
   );
 });
 
+router.get("/profilePhoto/:photoId", async (req, res) => {
+  const user = await req.context.models.User.find({
+    profilePhoto: req.params.photoId,
+  });
+  if (user) return res.send(user);
+  else return "";
+});
+
+router.get("/id/:id", async (req, res) => {
+  const user = await req.context.models.User.findById(req.params.id);
+  return res.send(user);
+});
+
 export default router;
