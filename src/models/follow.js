@@ -1,14 +1,16 @@
 import mongoose from "mongoose";
 
 const followSchema = new mongoose.Schema({
-  userId: {
-    type: mongoose.Schema.Types.ObjectId,
+  user: {
+    type: Object,
     ref: "User",
   },
-  followingUserId: {
-    type: mongoose.Schema.Types.ObjectId,
+  followingUser: {
+    type: Object,
     ref: "User",
   },
 });
 
 const Follow = mongoose.model("Follow", followSchema);
+
+export default Follow;

@@ -33,6 +33,7 @@ app.use("/users", routes.user);
 app.use("/photos", routes.photo);
 app.use("/comments", routes.comment);
 app.use("/likes", routes.like);
+app.use("/follows", routes.follow);
 
 const createUser = async () => {
   const user1 = new models.User({

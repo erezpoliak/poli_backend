@@ -14,15 +14,14 @@ router.post("/", async (req, res) => {
     url: req.body.url,
     user: req.body.user,
   });
-
-  router.get("/:user", async (req, res) => {
-    const photos = await req.context.models.Photo.find({
-      user: req.params.user,
-    });
-    return res.send(photos);
-  });
-
   return res.send(photo);
+});
+
+router.get("/:userId", async (req, res) => {
+  const photos = await req.context.models.Photo.find({
+    "user._id": req.params.userId,
+  });
+  return res.send(photos);
 });
 
 router.delete("/:photoId", async (req, res) => {
