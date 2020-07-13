@@ -21,7 +21,7 @@ connectDb().then(async () => {
   try {
     await createUser();
     app.listen(process.env.PORT || 8080, () => {
-      console.log(`example app listen on port ${process.env.PORT}`);
+      console.log(`app listen on port ${process.env.PORT}`);
     });
   } catch (err) {
     throw new Error(err);
