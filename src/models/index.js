@@ -10,8 +10,14 @@ mongoose.set("useUnifiedTopology", true);
 mongoose.set("useCreateIndex", true);
 mongoose.set("useFindAndModify", false);
 
-const connectDb = () => {
-  return mongoose.connect(process.env.MONGODBURI, { useNewUrlParser: true });
+const connectDb = async () => {
+  try {
+    return await mongoose.connect(process.env.MONGODBURI, {
+      useNewUrlParser: true,
+    });
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 const models = { User, Message, Photo, Comment, Like, Follow };
