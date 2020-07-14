@@ -36,7 +36,6 @@
     "express": "^4.17.1",
     "mongoose": "^5.9.18",
     "nodemon": "^2.0.4",
-    "regenerator-runtime": "^0.13.5",
     "uuid": "^8.1.0"
   }
 }
