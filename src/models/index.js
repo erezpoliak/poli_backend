@@ -12,7 +12,7 @@ mongoose.set("useFindAndModify", false);
 
 const connectDb = async () => {
   try {
-    return await mongoose.connect(process.env.MONGODBURI, {
+    await mongoose.connect(process.env.MONGODBURI, {
       useNewUrlParser: true,
     });
   } catch (err) {
