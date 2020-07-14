@@ -11,7 +11,7 @@ mongoose.set("useCreateIndex", true);
 mongoose.set("useFindAndModify", false);
 
 const connectDb = () => {
-  return mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
+  return mongoose.connect(process.env.MONGODBURI, { useNewUrlParser: true });
 };
 
 const models = { User, Message, Photo, Comment, Like, Follow };
