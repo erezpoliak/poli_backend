@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "startdev": "nodemon --exec babel-node src/index.js",
-    "start": "npm run build && node dist/index.js",
+    "start": "node dist/index.js",
     "build": "babel src -d dist"
   },
   "proxy": "http://localhost:8080",
@@ -20,7 +20,8 @@
     "url": "https://github.com/erezpoliak/poli_backend/issues"
   },
   "homepage": "https://github.com/erezpoliak/poli_backend#readme",
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
     "@babel/cli": "^7.10.4",
     "@babel/core": "^7.10.4",
     "@babel/node": "^7.10.1",
@@ -29,14 +30,13 @@
     "@babel/plugin-transform-runtime": "^7.10.4",
     "@babel/preset-env": "^7.10.2",
     "@babel/runtime": "^7.10.4",
-    "nodemon": "^2.0.4"
-  },
-  "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.9.18",
+    "nodemon": "^2.0.4",
+    "regenerator-runtime": "^0.13.5",
     "uuid": "^8.1.0"
   }
 }
