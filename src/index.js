@@ -19,7 +19,7 @@ app.use(async (req, res, next) => {
 
 connectDb().then(async () => {
   try {
-    await createUser();
+    // await createUser();
     app.listen(process.env.PORT || 8080, () => {
       console.log(`app listen on port ${process.env.PORT}`);
     });
@@ -35,10 +35,11 @@ app.use("/comments", routes.comment);
 app.use("/likes", routes.like);
 app.use("/follows", routes.follow);
 
-const createUser = async () => {
-  const user1 = new models.User({
-    userName: "Erez0601",
-    email: "poliakerez@gmail.com",
-    password: 123456,
-  });
-};
+// const createUser = async () => {
+//   const user1 = new models.User({
+//     userName: "Erez0601",
+//     email: "poliakerez@gmail.com",
+//     password: 123456,
+//   });
+//   user1.save();
+// };
