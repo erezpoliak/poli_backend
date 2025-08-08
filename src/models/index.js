@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
-import User from "./user";
-import Message from "./message";
-import Photo from "./photo";
-import Comment from "./comment";
-import Follow from "./follow";
-import Like from "./like";
+import User from "./user.js";
+import Message from "./message.js";
+import Photo from "./photo.js";
+import Comment from "./comment.js";
+import Follow from "./follow.js";
+import Like from "./like.js";
 
 mongoose.set("useUnifiedTopology", true);
 mongoose.set("useCreateIndex", true);
