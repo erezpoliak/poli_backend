@@ -1,8 +1,8 @@
-import message from "./message";
-import user from "./user";
-import photo from "./photo";
-import comment from "./comment";
-import like from "./like";
-import follow from "./follow";
+import message from "./message.js";
+import user from "./user.js";
+import photo from "./photo.js";
+import comment from "./comment.js";
+import like from "./like.js";
+import follow from "./follow.js";
 
 export default { message, user, photo, comment, like, follow };
